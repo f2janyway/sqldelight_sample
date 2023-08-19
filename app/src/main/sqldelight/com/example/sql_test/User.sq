@@ -1,0 +1,26 @@
+-- after write this table and functions
+-- you must rebuild for generating or changed code
+-- and if not referenced after build check build/generated/sqldelight
+-- and `reload from disk` for refresh
+CREATE TABLE User(
+id INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT,
+full_name TEXT NOT NULL
+);
+
+selectAll:
+SELECT * 
+FROM  User;
+
+insert:
+INSERT INTO  User(id,full_name) VALUES (?,?);
+
+-- deleteByFullName:
+-- DELETE FROM User WHERE full_name = ?;
+
+deleteById:
+DELETE FROM User WHERE id = ?;
+-- selectByIndex:
+-- SELECT * FROM User WHERE id = ?;
+
+
+
